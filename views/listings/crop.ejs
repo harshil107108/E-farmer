@@ -1,0 +1,88 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <% if (currUser && currUser.username === "admin") { %>
+
+  <div class="row">
+    <h1 id="live">
+      <span style="color: red"
+        >Live
+        <img
+          src="/images/instagram-live.png"
+          alt="..."
+          height="50rem"
+          width="50rem"
+      /></span>
+      crop price
+    </h1>
+
+    <table data-aos="fade-up">
+      <tr>
+        <th>image</th>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+
+      <%for(crop of crops){%>
+      <tr data-aos="fade-up">
+        <td style="display: flex; justify-content: center">
+          <img src="<%= crop.image %>" alt="..." />
+        </td>
+        <td><%= crop.item %></td>
+        <td>
+          &#8377;<%=crop.price%>/kg
+          <img
+            src="/images/instagram-live.png"
+            alt="..."
+            style="border: none"
+          />
+        </td>
+        <td class="col-2">
+          <form method="GET" action="/listings/crop/<%= crop._id %>">
+            <button class="btn btn-dark">Change Price</button>
+          </form>
+        </td>
+      </tr>
+      <%}%>
+    </table>
+  </div>
+  <% } else {%>
+  <div class="row">
+    <h1 id="live">
+      <span style="color: red"
+        >Live
+        <img
+          src="/images/instagram-live.png"
+          alt="..."
+          height="50rem"
+          width="50rem"
+      /></span>
+      crop price
+    </h1>
+
+    <table data-aos="fade-up">
+      <tr>
+        <th>image</th>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+
+      <%for(crop of crops){%>
+      <tr data-aos="fade-up">
+        <td style="display: flex; justify-content: center">
+          <img src="<%= crop.image %>" alt="..." />
+        </td>
+        <td><%= crop.item %></td>
+        <td>
+          &#8377;<%=crop.price%>/kg
+          <img
+            src="/images/instagram-live.png"
+            alt="..."
+            style="border: none"
+          />
+        </td>
+      </tr>
+      <%}%>
+    </table>
+  </div>
+  <% } %>
+</body>

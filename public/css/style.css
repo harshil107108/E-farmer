@@ -1,0 +1,389 @@
+html {
+  scroll-behavior: smooth;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+td img {
+  height: 5rem;
+  border-radius: 2rem;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.navbar-brand img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+/* Card */
+.card {
+  border: none !important;
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none !important;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.poster {
+  height: 200px;
+  width: 100%;
+}
+
+.image-container {
+  width: 100%; /* You can change this to any width you want */
+  height: 400px; /* Set the height as needed */
+  overflow: hidden; /* Optional: hides any part of the image that exceeds the container */
+  position: relative;
+}
+
+.image-container img {
+  width: 100%; /* Stretch image to fill the width of the div */
+  height: 100%; /* Stretch image to fill the height of the div */
+  object-fit: cover; /* Optional: this will make sure the image covers the entire div without distorting */
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.card-img-top {
+  border-radius: 2rem;
+}
+
+.button {
+  width: 15%;
+  display: flex;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  justify-content: space-evenly;
+}
+
+.edit a {
+  width: 10rem;
+  margin-right: 1rem;
+  padding-left: 4px;
+}
+.edit a span {
+  margin-left: 5px;
+}
+
+.item-info {
+  padding: 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.item-info ul {
+  list-style-type: none;
+}
+
+.item-info ul li {
+  margin-top: 1rem;
+}
+
+/* footer style*/
+.footer {
+  background-color: #02021e;
+  padding: 2rem 0;
+  height: 35rem;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-container div {
+  color: white;
+  height: 100%;
+  width: 33%;
+}
+
+.footer-subscribe {
+  padding: 0 2.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-links a {
+  color: white;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+  height: 10rem;
+}
+
+.footer-links a i {
+  height: 10rem !important;
+}
+
+.footer-link-heading {
+  margin-top: 2.5rem;
+  margin-bottom: -1.5rem;
+}
+
+.footer-email input {
+  border-color: white !important;
+  background-color: #02021e !important;
+  height: 3rem !important;
+  width: 40rem !important ;
+  border-radius: 2rem !important;
+  padding-left: 1rem !important;
+}
+
+.footer-email {
+  display: flex;
+}
+
+.footer-email button {
+  margin-top: 0.5rem;
+  margin-left: -2.1rem;
+  border: none;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer-services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-services a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
+.footer-services ul li {
+  margin-bottom: 1.5rem;
+}
+
+/* for video */
+.ai-gradient-text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #7a00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  background-size: 300% 100%;
+  animation: gradientAnimation 3s infinite linear;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Video Container */
+.videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Video Frame */
+.video {
+  width: 315px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .videos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .video {
+    width: 90%;
+  }
+}
+
+.ai-gradient-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #7a00ff, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  background-size: 300% 100%;
+  animation: gradientAnimation 3s infinite linear;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Form Styling */
+.prediction-form form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-select,
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #7a00ff;
+  box-shadow: 0 0 8px rgba(122, 0, 255, 0.5);
+}
+
+/* Button Styling */
+.ai-button {
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #7a00ff);
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 138, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 0, 0.3),
+    rgba(122, 0, 255, 0.1)
+  );
+  transition: all 0.4s ease-in-out;
+}
+
+.ai-button:hover::before {
+  top: 0%;
+  left: 0%;
+}
+
+.ai-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 138, 0, 0.9);
+}
+
+.ai-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 15px rgba(255, 138, 0, 0.5);
+}
+
+/* Recommendation & Error Styling */
+.recommendation-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  text-align: center;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.recommendation-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(76, 175, 80, 0.9);
+}
+
+/* AI-Themed Error Box */
+.error-box {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+  text-align: center;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.error-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(211, 47, 47, 0.9);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

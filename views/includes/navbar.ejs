@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-body-light sticky-top mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"
+      ><img
+      src=https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-26647.jpg?w=740
+      alt="" id="web-logo" /></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Home</a>
+
+        <!-- <a class="nav-link" href="/listings/new">Add new item</a> -->
+        <% if (currUser && currUser.username === "admin") { %>
+        <a class="nav-link" href="/listings/new">Add new item</a>
+        <% } %>
+
+        <a
+          class="nav-link"
+          href="https://ikhedut.gujarat.gov.in/"
+          target="_blank"
+          >Gov Scheme</a
+        >
+        <a class="nav-link" href="/listings/crop">Live Price</a>
+
+        <a class="nav-link" href="/recommend-crop">Crop Predictor</a>
+        <a class="nav-link" href="/videos">Teaching Videos</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <%if(!currUser){%>
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/signup">SignUp</a>
+        <% } %> <%if(currUser){%>
+        <a class="nav-link" href="/logout">Logout</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

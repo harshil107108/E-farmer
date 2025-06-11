@@ -1,0 +1,57 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <!-- <div class="image-container mb-3">
+    <img
+    src=https://thumbs.dreamstime.com/b/farmer-field-inspects-crop-agricultural-even-rows-man-tending-to-crops-illustration-cover-card-interior-337557718.jpg
+    alt="..." id="poster" />
+  </div> -->
+
+  <!-- Swiper Container -->
+  <div class="swiper-container image-container mb-3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          src="https://thumbs.dreamstime.com/b/farmer-field-inspects-crop-agricultural-even-rows-man-tending-to-crops-illustration-cover-card-interior-337557718.jpg"
+          alt="..."
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="https://t4.ftcdn.net/jpg/05/95/55/89/360_F_595558921_z1JnF4ieH75XlWoDPuh1Os97QkPnb4dx.jpg"
+          alt="..."
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="https://t3.ftcdn.net/jpg/03/88/54/50/360_F_388545000_s4RsrD79y9GA04jkCsM8SX3wOaO9nSOW.jpg"
+          alt="..."
+        />
+      </div>
+    </div>
+
+    <!-- Swiper Pagination & Navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div class="row row-cols-lg-3">
+    <%for(listing of listings){%>
+    <a href="/listings/<%=listing._id%>" class="link">
+      <div class="card col mb-3" style="width: 18rem" data-aos="fade-up">
+        <img
+          src="<%= listing.image %>"
+          class="card-img-top"
+          alt="..."
+          style="height: 18rem"
+        />
+        <div class="card-body">
+          <b><%= listing.title%></b>
+          <br />
+          &#8377;<%= listing.price.toLocaleString("en-IN")%>
+        </div>
+      </div>
+    </a>
+    <% }%>
+  </div>
+</body>

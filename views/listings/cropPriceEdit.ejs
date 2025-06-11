@@ -1,0 +1,18 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <form method="POST" action="/listings/crop/<%=cropDetails._id%>?_method=PUT">
+    <div class="row"></div>
+    <div class="mb-3 col-4 offset-3">
+      <label for="price" class="form-label">Enter new Price</label>
+      <input
+        type="number"
+        value="<%= cropDetails.price %>"
+        class="form-control"
+        id="price"
+        name="price"
+      />
+    </div>
+
+    <div class="offset-3"><button class="btn btn-success">Submit</button></div>
+  </form>
+</body>

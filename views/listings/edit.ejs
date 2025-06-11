@@ -1,0 +1,51 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <form method="POST" action="/listings/<%= item._id %>?_method=PUT">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            name="listing[title]"
+            value="<%= item.title %>"
+            id="title"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]%"
+            id="description"
+            class="form-control"
+          >
+<%= item.description%></textarea
+          >
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            value="<%= item.price %>"
+            id="price"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input
+            type="text"
+            name="listing[image]"
+            value="<%= item.image %>"
+            id="image"
+            class="form-control"
+          />
+        </div>
+
+        <button class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
